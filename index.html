@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Flash Cards</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 style="display: flex;">flash Cards</h1>
+        </div>
+    
+    
+     <div class="main-container">
+     
+        <div class="container-1">
+            
+            <button onclick="showContainer2()" class="btn btn-outline-primary">Add Card</button>
+        </div>
+        <div class="container-2">
+            <form>
+                <label>Question</label>
+                <svg onclick="hideContainer2()" width="20" height="20" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg><br>
+                  <textarea id="question"></textarea>
+            </form>
+    
+   
+
+            <form >
+                <label>Answer</label><br>
+                <textarea id="answer" ></textarea>
+            </form>
+            <button class="btn btn-outline-primary" onclick="saveFlashcard()">Save</button>
+        </div>
+    </header> 
+        <div class="container-3">
+            <div class="nav" style="display: none;">
+                <label>add your answer</label>
+                <textarea id="studentAns"></textarea>
+                <button class="btn btn-outline-primary" onclick="checkAns()"></button>
+            </div>
+            
+        </div>
+        
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
